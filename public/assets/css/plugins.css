@@ -20,7 +20,7 @@
 @import url("plugins/animate.min.css");
 
 /* == icofont icon font == */
-@import url("plugins/icofont.css");
+@import url("plugins/icofont.min.css");
 
 /* == fontawesome icon font == */
 @import url("plugins/fontawesome-all.min.css");
