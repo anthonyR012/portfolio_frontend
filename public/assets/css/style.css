@@ -63,14 +63,16 @@ span, a, a:hover {
   font-weight: 800;
   font-family: inherit;
   letter-spacing: 2px;
-  color: #222;
+
+  color: transparent;
   -webkit-transition: all .4s;
   transition: all .4s;
+  -webkit-text-stroke: 1px #7c7979;
 }
 
 section:hover .section-head h4 {
-  color: transparent;
-  -webkit-text-stroke: 1px #333;
+  color: white;
+  -webkit-text-stroke: 0px;
 }
 
 .wave {
@@ -587,7 +589,6 @@ section:hover .section-head h4 {
 .services .item {
   text-align: center;
   padding: 50px 20px;
-  background: #0a0a0c;
 }
 .services .item:hover .icon {
   color:  var(--primary);
