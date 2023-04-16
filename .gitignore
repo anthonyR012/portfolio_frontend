@@ -66,3 +66,4 @@ node_modules/
 .env
 
 virtualportfolio-key.json
+firebaseConfig.json
