@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-size: 15px;
-  color: #8f8f8f;
+  color: rgb(105, 101, 104);
   line-height: 1.8;
   margin: 0;
 }
@@ -51,7 +51,7 @@ span, a, a:hover {
 }
 
 .section-padding {
-  padding: 120px 0;
+  padding: 50px 0;
 }
 
 .section-head {
@@ -521,6 +521,8 @@ section:hover .section-head h4 {
   color:  var(--secondary);
 }
 
+
+
 .hero {
   z-index: 3;
 }
@@ -594,10 +596,20 @@ section:hover .section-head h4 {
   color:  var(--primary);
 }
 .services .item:hover .icon:after {
-  background:  var(--secondary);
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  /* background:  var(--secondary);
+  -webkit-transform: rotate(300deg);
+          transform: rotate(300deg); */
+          content: "";
+          position: absolute;
+          top: 100%; /* Posiciona el reflejo justo debajo del contenido original */
+          left: -78%;
+          width: 260%;
+          height: 260%;
+          background: linear-gradient(to bottom,var(--secondary),   rgba(255, 255, 255, 0)); /* Gradiente de transparente a blanco */
+          transform: scaleY(-1); /* Invierte verticalmente para el efecto espejo */
 }
+
+
 .services .item .icon {
   display: inline-block;
   color:  var(--secondary);
@@ -621,20 +633,54 @@ section:hover .section-head h4 {
   border-radius: 30px;
   background: rgba(200, 200, 200, 0.05);
   z-index: -1;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transition: all .4s;
+  transform: rotate(45deg);
   transition: all .4s;
 }
+
+.services .item:hover h6,
+.services .item:hover p {
+  opacity: 1;
+}
+
 .services .item h6 {
   font-weight: 400;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  color: var(--light);
   font-size: 16px;
   margin-bottom: 15px;
 }
+
 .services .item p {
   font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
 }
 
+@media screen and (max-width: 991px) {
+  .services .item:hover .icon:after{
+    content: "";
+    position: absolute;
+    top: 100%; /* Posiciona el reflejo justo debajo del contenido original */
+    left: -130%;
+    width: 350%;
+    height: 260%;
+    background: linear-gradient(to bottom,    var(--secondary),rgba(255, 255, 255, 0)); /* Gradiente de transparente a blanco */
+    transform: scaleY(-1); 
+  }
+}
+@media screen and (max-width: 700px) {
+  .services .item:hover .icon:after{
+    content: "";
+    position: absolute;
+    top: 100%; /* Posiciona el reflejo justo debajo del contenido original */
+    left: -250%;
+    width: 600%;
+    height: 260%;
+    background: linear-gradient(to bottom,    var(--secondary),rgba(255, 255, 255, 0)); /* Gradiente de transparente a blanco */
+    transform: scaleY(-1); 
+  }
+}
 /* ----------------------------------------------------------------
      [ End Services ]
 -----------------------------------------------------------------*/
@@ -1422,7 +1468,7 @@ footer p {
 }
 
 .timeline li .details {
-  background-color: #0a0a0a;
+  /* background-color: #0a0a0a;  */
   margin-top: 8px;
   padding: 20px;
   border-radius: 4px;
