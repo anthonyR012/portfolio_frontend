@@ -15,16 +15,27 @@ form.addEventListener("submit", (event) => {
   saveFormData();
 });
 
-fetch('../firebaseConfig.json')
-  .then(response => response.json())
-  .then(data => {
-    var firebaseConfig = data;
-    app = initializeApp(firebaseConfig);
-    database = getFirestore(app);
-  })
-  .catch(error => {
-    console.error('Error al cargar el archivo:', error);
-  });
+const firebaseConfig = {
+  apiKey: "AIzaSyDuFuRXrTGpPubskNZCSIYiXJ02n49_q94",
+  authDomain: "solid-clone-334117.firebaseapp.com",
+  projectId: "solid-clone-334117",
+  storageBucket: "solid-clone-334117.appspot.com",
+  messagingSenderId: "815687967940",
+  appId: "1:815687967940:web:6f886da8a9ea1cc06e9591"
+};
+app = initializeApp(firebaseConfig);
+database = getFirestore(app);
+// fetch('../firebaseConfig.json')
+//   .then(response => response.json())
+//   .then(data => {
+    
+//     var firebaseConfig = data;
+//     app = initializeApp(firebaseConfig);
+//     database = getFirestore(app);
+//   })
+//   .catch(error => {
+//     console.error('Error al cargar el archivo:', error);
+//   });
 
 async function saveFormData() {
   let timerInterval
