@@ -857,7 +857,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 142px;
   height: 40px;
   margin: -20px 0 0 -71px;
-  background: #fff;
+  background: transparent;
   filter: contrast(20);
 }
 .gooey .dot {
