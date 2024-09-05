@@ -596,20 +596,10 @@ section:hover .section-head h4 {
   color:  var(--primary);
 }
 .services .item:hover .icon:after {
-  /* background:  var(--secondary);
-  -webkit-transform: rotate(300deg);
-          transform: rotate(300deg); */
-          content: "";
-          position: absolute;
-          top: 100%; /* Posiciona el reflejo justo debajo del contenido original */
-          left: -78%;
-          width: 260%;
-          height: 260%;
-          background: linear-gradient(to bottom,var(--secondary),   rgba(255, 255, 255, 0)); /* Gradiente de transparente a blanco */
-          transform: scaleY(-1); /* Invierte verticalmente para el efecto espejo */
+  background:  var(--secondary);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
-
-
 .services .item .icon {
   display: inline-block;
   color:  var(--secondary);
@@ -633,54 +623,20 @@ section:hover .section-head h4 {
   border-radius: 30px;
   background: rgba(200, 200, 200, 0.05);
   z-index: -1;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all .4s;
   transition: all .4s;
 }
-
-.services .item:hover h6,
-.services .item:hover p {
-  opacity: 1;
-}
-
 .services .item h6 {
   font-weight: 400;
-  opacity: 0;
-  transition: opacity 0.6s ease;
-  color: var(--light);
   font-size: 16px;
   margin-bottom: 15px;
 }
-
 .services .item p {
   font-size: 14px;
-  opacity: 0;
-  transition: opacity 0.6s ease;
 }
 
-@media screen and (max-width: 991px) {
-  .services .item:hover .icon:after{
-    content: "";
-    position: absolute;
-    top: 100%; /* Posiciona el reflejo justo debajo del contenido original */
-    left: -130%;
-    width: 350%;
-    height: 260%;
-    background: linear-gradient(to bottom,    var(--secondary),rgba(255, 255, 255, 0)); /* Gradiente de transparente a blanco */
-    transform: scaleY(-1); 
-  }
-}
-@media screen and (max-width: 700px) {
-  .services .item:hover .icon:after{
-    content: "";
-    position: absolute;
-    top: 100%; /* Posiciona el reflejo justo debajo del contenido original */
-    left: -250%;
-    width: 600%;
-    height: 260%;
-    background: linear-gradient(to bottom,    var(--secondary),rgba(255, 255, 255, 0)); /* Gradiente de transparente a blanco */
-    transform: scaleY(-1); 
-  }
-}
 /* ----------------------------------------------------------------
      [ End Services ]
 -----------------------------------------------------------------*/
@@ -751,11 +707,18 @@ section:hover .section-head h4 {
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
 }
-.portfolio .item-img-overlay a {
+.portfolio .item-img-overlay a:nth-of-type(1) {
   font-size: 30px;
   position: absolute;
   bottom: 15px;
   right: 15px;
+  color:  var(--secondary);
+}
+.portfolio .item-img-overlay a:nth-of-type(2) {
+  font-size: 30px;
+  position: absolute;
+  bottom: 15px;
+  right: 50px;
   color:  var(--secondary);
 }
 
@@ -1284,7 +1247,6 @@ footer p {
   color: #999;
   font-weight: 400;
   font-size: 12px;
-  text-transform: uppercase;
   letter-spacing: 2px;
 }
 
